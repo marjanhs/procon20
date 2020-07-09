@@ -7,3 +7,5 @@ We investigate whether pre-trained bidirectional transformers with sentiment and
 
 # Dataset:
 
+Procon20 contains 419 different controversial issues with 6094 samples. Each sample is a pair of a *(question, argument)* that is either a *pro*(01) or a *con*(10). The dataset file can be found here at root. 
+
