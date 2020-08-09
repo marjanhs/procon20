@@ -25,6 +25,9 @@ The paper can be found [here](https://www.aclweb.org/anthology/2020.socialnlp-1.
 }
 ```
 
+# Code: 
+The code is an extention of [Hedwig](https://github.com/marjanhs/hedwig) implementation of BERT. Please follow Hedwig's instruction to install the requirements. (you do not need to install word embedding for this project)
+
 # Dataset:
 
 Procon20 contains 419 different controversial issues with 6094 samples. Each sample is a pair of a *(question, argument)* that is either a *pro*(01) or a *con*(10). The dataset file can be found at ```data/ProconDual```. Place dataset files in  ```../hedwig-data/datasets/ProconDual/```
