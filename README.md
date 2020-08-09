@@ -29,3 +29,14 @@ The paper can be found [here](https://www.aclweb.org/anthology/2020.socialnlp-1.
 
 Procon20 contains 419 different controversial issues with 6094 samples. Each sample is a pair of a *(question, argument)* that is either a *pro*(01) or a *con*(10). The dataset file can be found here at root. 
 
+
+# Model Execution:
+
+```
+python -m models.bert_lstm  --dataset ProconDual  --model bert-base-uncased --max-seq-length 256 --batch-size 8 --lr 2e-4 --epochs 30  --gpu 1 --early_on_f1 --seed 2035  --pooling
+
+```
+(GRU, no att, Bidirectional, mx-pool,avg-pool,drop 0.1)
+
+
+
