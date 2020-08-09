@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 
 def get_args():
     parser = ArgumentParser(description="PyTorch deep learning models for document classification")
-    par = '/home/marjan/projects/'
+    par = '/home/projects/'
     parser.add_argument('--no-cuda', action='store_false', dest='cuda')
     parser.add_argument('--gpu', type=int, default=0)
     parser.add_argument('--epochs', type=int, default=50)
