@@ -27,16 +27,23 @@ The paper can be found [here](https://www.aclweb.org/anthology/2020.socialnlp-1.
 
 # Dataset:
 
-Procon20 contains 419 different controversial issues with 6094 samples. Each sample is a pair of a *(question, argument)* that is either a *pro*(01) or a *con*(10). The dataset file can be found here at root. 
+Procon20 contains 419 different controversial issues with 6094 samples. Each sample is a pair of a *(question, argument)* that is either a *pro*(01) or a *con*(10). The dataset file can be found here at root. Place dataset files in  ```../hedwig-data/datasets/ProconDual/```
 
 
 # Model Execution:
+ To train and evaluate the VADER-sent-GRU model on (train.tsv, dev.tsv, test.tsv):
 
 ```
 python -m models.bert_lstm  --dataset ProconDual  --model bert-base-uncased --max-seq-length 256 --batch-size 8 --lr 2e-4 --epochs 30  --gpu 1 --early_on_f1 --seed 2035  --pooling
 
 ```
-(GRU, no att, Bidirectional, mx-pool,avg-pool,drop 0.1)
+
+To train and evaluate the NRC-Emotion-GRU model on on (train.tsv, dev.tsv, test.tsv):
+
+```
+python -m models.bert_lstm_emotion  --dataset ProconDual  --model bert-base-uncased --max-seq-length 256 --batch-size 8 --lr 2e-4 --epochs 30  --gpu 1 --early_on_f1 --seed 2035  --max-em-len 11 --pooling --emotion-filters positive,negative
+```
+
 
 
 
